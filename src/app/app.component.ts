@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  odds: number[] = [];
+  evens: number[] = [];
+
+  onGameStarted(curGameTime: number) {
+    console.log(curGameTime);
+    if (curGameTime % 2 === 0) {
+      this.evens.push(curGameTime);
+    } else {
+      this.odds.push(curGameTime);
+    }
+  }
+
 }
